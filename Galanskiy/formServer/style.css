@@ -1,0 +1,9 @@
+body {
+    background: rgb(201, 197, 197) !important;
+}
+
+.form-server {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
