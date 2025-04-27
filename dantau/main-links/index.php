@@ -20,6 +20,7 @@
     <a href="../lab13/index.php" class="">Лаба 13</a>
     <a href="../lab14/registration.php" class="">Лаба 14</a>
     <a href="../lab15/index.php" class="">Лаба 15</a>
+    <a href="../lab16/index.php" class="">Лаба 16</a>
     <a href="../form/index.php" class="">Форма</a>
     <a href="../formServer/index.php" class="">Форма/сервер</a>
     <a href="../Practick-7/index.php" class="">Практическая 7</a>

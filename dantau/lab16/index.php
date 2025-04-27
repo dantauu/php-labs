@@ -16,7 +16,7 @@
                     <a href="login.php">Авторизация</a>
                     <a href="registration.php">Регистрация</a>
                 <?php else: ?>
-                    <span>Добро пожаловать, <?= htmlspecialchars($_SESSION['name']) ?></span>
+                    <a href="lk.php">Личный кабинет</a>
                     <a href="exit.php">Выход</a>
                 <?php endif; ?>
             </div>
@@ -25,9 +25,9 @@
             <?php if(empty($_SESSION['dustup'])): ?>
                 <h1>Добро пожаловать на наш сайт!</h1>
                 <p>Для просмотра дополнительной информации авторизуйтесь</p>
-                <?php else: ?>
-                  <h1>Теперь вы имеете полный доступ!</h1>
-                  <img src="./catman.jpg" alt="1" style="width: 500px; height: 500px; border-radius: 30%;">
+            <?php else: ?>
+                <h1>Добро пожаловать, <?= htmlspecialchars($_SESSION['name']) ?>!</h1>
+                <p>Перейдите в свой <a href="lk.php">личный кабинет</a> для управления учетной записью.</p>
             <?php endif; ?>
         </div>
     </main>

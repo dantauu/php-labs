@@ -20,7 +20,8 @@ $result = $stmt->get_result();
 
 if ($result && $result->num_rows > 0) {
     $user = $result->fetch_assoc();
-    $_SESSION['name'] = $user['name'];
+    $_SESSION['name']   = $user['name'];
+    $_SESSION['login']  = $user['login'];
     $_SESSION['dustup'] = true;
     header('Location: index.php');
     exit();
