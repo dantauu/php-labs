@@ -21,22 +21,22 @@
     <form style='display: flex; flex-direction: column; gap: 20px; width: 340px' action="action_reg.php" method="POST">
         <div style='display: flex; justify-content: space-between;'>
             <label>Имя пользователя:</label>
-            <input type="text" name="name" required>
+            <input type="text" name="name">
         </div>
         
         <div style='display: flex; justify-content: space-between;'>
             <label>Логин:</label>
-            <input type="text" name="login" required>
+            <input type="text" name="login">
         </div>
         
         <div style='display: flex; justify-content: space-between;'>
             <label>Пароль (до 15 символов):</label>
-            <input type="password" name="password" maxlength="15" required>
+            <input type="password" name="password" maxlength="15">
         </div>
         
         <div style='display: flex; justify-content: space-between;'>
             <label>Подтверждение пароля:</label>
-            <input type="password" name="confirm_password" maxlength="15" required>
+            <input type="password" name="confirm_password" maxlength="15">
         </div>
         
         <button type="submit">Зарегистрироваться</button>

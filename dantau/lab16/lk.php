@@ -81,12 +81,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
             <form action="lk.php" method="POST" style="display:flex; flex-direction:column; gap:10px;">
                 <label>Текущий пароль:</label>
-                <input type="password" name="old_pass" maxlength="15" required>
+                <input type="password" name="old_pass" maxlength="15">
                 <label>Новый пароль:</label>
-                <input type="password" name="new_pass" maxlength="15" required>
+                <input type="password" name="new_pass" maxlength="15">
 
                 <label>Повторите новый пароль:</label>
-                <input type="password" name="confirm_pass" maxlength="15" required>
+                <input type="password" name="confirm_pass" maxlength="15">
 
                 <button type="submit" style="padding:8px 12px;">Сменить пароль</button>
             </form>
