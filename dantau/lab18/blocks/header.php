@@ -1,7 +1,7 @@
 <div class="header">
     <div class="logo">
         <a href="index.php">
-            <img src="img/logo.png" alt="Логотип сайта" width="100">
+            <img src="./assets/auto.svg" alt="Логотип сайта" width="100">
         </a>
     </div>
     <div class="user-block">

@@ -21,7 +21,6 @@ $isAuth = isset($_SESSION['login']);
                     include $content;
                 } else {
                     if (isset($_GET['region'])) {
-                        // Вывод городов выбранного региона
                         $region_id = (int)$_GET['region'];
                         $stmt = $conn->prepare("
                             SELECT c.*, r.name as region_name 
@@ -32,7 +31,6 @@ $isAuth = isset($_SESSION['login']);
                         ");
                         $stmt->execute([':region_id' => $region_id]);
                     } else {
-                        // Вывод последних 5 добавленных городов
                         $stmt = $conn->query("
                             SELECT c.*, r.name as region_name 
                             FROM cities c 
@@ -46,7 +44,8 @@ $isAuth = isset($_SESSION['login']);
                         ?>
                         <div class="city-card">
                             <a href="?content=pages/single_city.php&city=<?php echo $city['id']; ?>">
-                                <img src="img/cities/<?php echo $city['logo'] ?? 'default.jpg'; ?>" alt="<?php echo htmlspecialchars($city['name']); ?>" class="city-logo">
+                                <img src="img/cities/<?php echo $city['logo'] ?? 'default.jpg'; ?>" alt="<?php echo htmlspecialchars
+                                ($city['name']); ?>" class="city-logo">
                             </a>
                             <div class="city-info">
                                 <h2 class="city-name">

@@ -4,7 +4,6 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== 'admin') {
     exit();
 }
 
-// Получаем список регионов для выпадающего списка
 $regions = $conn->query("SELECT * FROM region ORDER BY name")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

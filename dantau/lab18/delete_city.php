@@ -8,13 +8,11 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] !== 'admin') {
 
 if (isset($_GET['id'])) {
     $city_id = (int)$_GET['id'];
-    
-    // Получаем информацию о городе для удаления файла логотипа
+
     $stmt = $conn->prepare("SELECT logo FROM cities WHERE id = :id");
     $stmt->execute([':id' => $city_id]);
     $city = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    // Удаляем файл логотипа, если он существует и не является дефолтным
+
     if ($city && $city['logo'] !== 'default.jpg') {
         $logoPath = 'img/cities/' . $city['logo'];
         if (file_exists($logoPath)) {
@@ -22,7 +20,6 @@ if (isset($_GET['id'])) {
         }
     }
     
-    // Удаляем город из базы данных
     $stmt = $conn->prepare("DELETE FROM cities WHERE id = :id");
     $stmt->execute([':id' => $city_id]);
 }

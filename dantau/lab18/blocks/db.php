@@ -13,7 +13,7 @@ try {
     die();
 }
 
-// Создание таблицы регионов
+
 $sql = "CREATE TABLE IF NOT EXISTS region (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -21,7 +21,6 @@ $sql = "CREATE TABLE IF NOT EXISTS region (
 )";
 $conn->exec($sql);
 
-// Создание таблицы пользователей
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     login VARCHAR(50) NOT NULL UNIQUE,
@@ -30,7 +29,6 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
 )";
 $conn->exec($sql);
 
-// Создание таблицы городов с новыми полями
 $sql = "CREATE TABLE IF NOT EXISTS cities (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -43,7 +41,6 @@ $sql = "CREATE TABLE IF NOT EXISTS cities (
 )";
 $conn->exec($sql);
 
-// Добавляем администратора, если его нет
 $sql = "SELECT COUNT(*) FROM users WHERE login = 'admin'";
 $count = $conn->query($sql)->fetchColumn();
 
@@ -55,15 +52,12 @@ if ($count == 0) {
     ]);
 }
 
-// Добавляем тестовые данные для регионов, если их нет
 $sql = "SELECT COUNT(*) FROM region";
 $count = $conn->query($sql)->fetchColumn();
 
 if ($count == 0) {
-    // Сначала удаляем все города (если они есть)
     $conn->exec("DELETE FROM cities");
-    
-    // Затем добавляем регионы
+
     $regions = [
         ['name' => 'Ростовская область', 'code' => '61'],
         ['name' => 'Московская область', 'code' => '50'],
@@ -76,8 +70,7 @@ if ($count == 0) {
     foreach ($regions as $region) {
         $stmt->execute($region);
     }
-    
-    // После добавления регионов добавляем города
+
     $cities = [
         ['name' => 'Ростов-на-Дону', 'area' => 348.5, 'population' => 1137704, 'region_id' => 1, 'description' => 'Город на юге России, административный центр Ростовской области'],
         ['name' => 'Таганрог', 'area' => 80.11, 'population' => 247000, 'region_id' => 1, 'description' => 'Портовый город в Ростовской области'],

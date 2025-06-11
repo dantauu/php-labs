@@ -12,9 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $population = $_POST['population'] ?? 0;
     $region_id = $_POST['region_id'] ?? '';
     $description = $_POST['description'] ?? '';
-    
-    // Проверка загрузки файла
-    $logo = 'default.jpg'; // значение по умолчанию
+
+    $logo = 'default.jpg';
     if (isset($_FILES['logo']) && $_FILES['logo']['error'] === UPLOAD_ERR_OK) {
         $uploadDir = 'img/cities/';
         if (!file_exists($uploadDir)) {
@@ -29,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $uploadFile = $uploadDir . $logo;
             
             if (move_uploaded_file($_FILES['logo']['tmp_name'], $uploadFile)) {
-                // Файл успешно загружен
             } else {
                 $logo = 'default.jpg';
             }
