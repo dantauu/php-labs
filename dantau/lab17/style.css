@@ -1,0 +1,102 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.avatar img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.content {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color: #f8f9fa;
+}
+
+form {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+input[type='text'],
+input[type='number'] {
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+input[type='submit'] {
+	padding: 8px 16px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type='submit']:hover {
+	background-color: #0056b3;
+}
+
+a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.logout-btn {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #dc3545;
+	color: white;
+	border-radius: 4px;
+	text-decoration: none;
+	margin-top: 10px;
+}
+
+.logout-btn:hover {
+	background-color: #c82333;
+	text-decoration: none;
+	color: white;
+}

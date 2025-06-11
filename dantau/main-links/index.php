@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
-    <link rel = "stylesheet" href="../main-links/style.css">
+    <link rel = "stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,11 +21,12 @@
     <a href="../lab14/registration.php" class="">Лаба 14</a>
     <a href="../lab15/index.php" class="">Лаба 15</a>
     <a href="../lab16/index.php" class="">Лаба 16</a>
+    <a href="../lab17/index.php" class="">Лаба 17</a>
+    <a href="../lab18/index.php" class="">Лаба 18</a>
     <a href="../form/index.php" class="">Форма</a>
     <a href="../formServer/index.php" class="">Форма/сервер</a>
     <a href="../Practick-7/index.php" class="">Практическая 7</a>
     <a href="../test/index.php" class="">Тест1</a>
     <a href="../test/practick1.php" class="">Практика</a>
-    
 </body>
 </html>
